@@ -1,0 +1,37 @@
+<!-- <div class="form-group row">
+
+    <label class="col-sm-4">Lookup Name:</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="Lookup_Name"
+        placeholder="Enter Lookup Name">
+    </div>
+</div>
+
+
+<button (click)="addLookupMaster()" *ngIf="lookupmaster.Lookup_Id==0" class="btn btn-primary">
+    Add
+</button>
+
+<button (click)="updateLookupMaster()" *ngIf="lookupmaster.Lookup_Id!=0" class="btn btn-primary">
+    Update
+</button> -->
+
+
+<div class="lookup-form">
+    <form class="blog" [formGroup]="lookupForm" >
+      <div class="row">
+        <div class="col-md-12 roundedTextBox mb-3">
+            <label>Lookup Name</label>
+            <input type="text"  [(ngModel)]="Lookup_Name" class="form-control mb-2" id="inputLookup_Name" formControlName="Lookup_Name" placeholder="Enter Lookup Name">
+            <div *ngIf="submitted && formControl.Lookup_Name.errors" class="text-danger">
+              <div *ngIf="formControl.Lookup_Name.errors.required">Name is required.</div>
+            </div>
+        </div>
+    </div>
+      <br>
+      <div class="buttons text-center">
+          <button type="button" *ngIf="lookupmaster.Lookup_Id==0" class="btn btn-primary" (click)="addLookupMaster()">Add</button>
+          <button type="button" *ngIf="lookupmaster.Lookup_Id!=0" class="btn btn-primary" (click)="updateLookupMaster()">Update</button>
+      </div>
+    </form>
+</div>

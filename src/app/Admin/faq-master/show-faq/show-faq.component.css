@@ -1,0 +1,129 @@
+@charset "utf-8";    
+
+
+ @media all{    
+
+.card-header{background-color:#f0f3f5; border-bottom:1px solid #c8ced3; font-size:13px; font-weight:600; color:#464646; text-transform:uppercase; padding:.75rem 8px;}    
+
+.cnstr-record th{white-space:nowrap;padding:.45rem .2rem; font-size:13px; border-bottom-width:0px!important;}    
+
+.cnstr-record thead{background:#f0f3f5;}    
+
+.cnstr-record .form-control{font-size:13px; padding:0px 0rem 0px 0.2rem; height:calc(2rem + 2px);}    
+
+.cnstr-record select.form-control{padding-left:.05rem;}    
+
+.cnstr-record .table td, .cnstr-record .table th {vertical-align:middle;}    
+
+.cnstr-record .table td{padding:.3rem;}    
+
+.cnstr-record .table td h4{margin:0px;}    
+
+    
+
+.wp-50{width:50px;}    
+
+.wp-60{width:60px;}    
+
+.wp-70{width:70px;}    
+
+.wp-80{width:80px;}    
+
+.wp-90{width:90px;}    
+
+.wp-100{width:100px;}    
+
+.mw-auto{min-width:inherit;}    
+
+.expand-row{width:100%; border:solid 1px #596269; display:inline-block; border-radius:3px; width:16px; height:16px; vertical-align:top; background:#596269; color:#ffffff!important;}    
+
+.expand-row img{vertical-align:top; position:relative; top:2px;}    
+
+.sub-table th{font-weight:400; font-size:12px;}    
+
+.sub-table td{background:#efefef;}    
+
+.no-bg td{background:inherit;}    
+
+.mw-100{max-width:100%;}    
+
+.activeTabColor{  
+
+    color: #fff;  
+
+    background-color: #000000;  
+
+}   
+
+.page-item:first-child .page-link {  
+
+    margin-left: 0;  
+
+    border-top-left-radius: .25rem;  
+
+    border-bottom-left-radius: .25rem;  
+
+}  
+
+.pageColor{  
+
+    position: relative;  
+
+    display: block;  
+
+    padding: .5rem .75rem;  
+
+    margin-left: -1px;  
+
+    line-height: 1.25;  
+
+    color: white!important;  
+
+    background-color: black!important;  
+
+    border: 1px solid #dee2e6;  
+
+}  
+
+.notAllowed{  
+
+    position: relative;  
+
+    display: block;  
+
+    padding: .5rem .75rem;  
+
+    margin-left: -1px;  
+
+    line-height: 1.25;  
+
+    color: #007bff;  
+
+    background-color: #fff;  
+
+    border: 1px solid #dee2e6;  
+
+    cursor: not-allowed;  
+
+}  
+.page-link {  
+
+    position: relative;  
+
+    display: block;  
+
+    padding: .5rem .75rem;  
+
+    margin-left: -1px;  
+
+    line-height: 1.25;  
+
+    color: #007bff;  
+
+    background-color: #fff;  
+
+    border: 1px solid #dee2e6;  
+
+}    
+
+ }  
