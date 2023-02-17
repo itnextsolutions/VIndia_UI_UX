@@ -1,8 +1,8 @@
 
     <!-- <div class="form-group" >
-        <label for="Category_Name">Select Category Name</label>
+        <label for="Category_Name">Select Category Name :</label>
         <select [(ngModel)]="Category_Id" class="form-control">
-            <option>Select CategoryName </option>
+            <option value="0">Select Category Name </option>
             <option *ngFor="let web of CategoryName" value="{{web.Category_Id}}" >
                 {{web.Category_Name}}
             </option>
@@ -71,10 +71,10 @@
     <form class="blog" [formGroup]="ProductForm">
       <div class="row">
         <div class="col-md-12 roundedTextBox mb-3">
-          <label>Select Category </label>
+          <label>Select Category :</label>
             <select [(ngModel)]="Category_Id" class="form-control" formControlName="Category_Id" #mySelect
             (change)='onOptionsSelected(mySelect.value)'>
-              <option>Select Category</option>
+              <option value="0">Select Category</option>
               <option *ngFor="let web of CategoryName" value="{{web.Category_Id}}" [(ngModel)]="Category_Id" id="inputCategory_Id" formControlName="Category_Id"> 
                   {{web.Category_Name}}
               </option>
@@ -84,7 +84,7 @@
           </div>
         </div>
         <div class="col-md-12 roundedTextBox mb-3">
-            <label>Select Sub Category </label>
+            <label>Select Sub Category :</label>
               <select [(ngModel)]="SubCategory_Id" class="form-control" formControlName="SubCategory_Id">
                 <option>Select Sub Category</option>
                 <option *ngFor="let web of SubCatList" value="{{web.Id}}" [(ngModel)]="SubCategory_Id" id="inputSubCategory_Id" formControlName="SubCategory_Id"> 
@@ -96,14 +96,14 @@
             </div>
           </div>
         <div class="col-md-12 roundedTextBox mb-3">
-          <label>Product Name</label>
+          <label>Product Name :</label>
           <input type="text"  [(ngModel)]="Product_Title" class="form-control mb-2" id="inputProduct_Title" formControlName="Product_Title" placeholder="Enter Product Name">
           <div *ngIf="submitted && formControl.Product_Title.errors" class="text-danger">
             <div *ngIf="formControl.Product_Title.errors.required">Product Name is required.</div>
           </div>
         </div>
         <div class="col-md-12 roundedTextBox mb-3">
-            <label>Product Description</label>
+            <label>Product Description :</label>
             <!-- <input type="text"  [(ngModel)]="Description" class="form-control mb-2" id="inputDescription" formControlName="Description" placeholder="Enter Product Description"> -->
             <textarea rows="8" cols="43" type="text"  [(ngModel)]="Product_Description" class="form-control mb-2" id="inputProduct_Description" formControlName="Product_Description" placeholder="Enter Product Description"></textarea>
             <div *ngIf="submitted && formControl.Description.errors" class="text-danger">
@@ -112,7 +112,7 @@
         </div>
 
         <div class="col-md-12 roundedTextBox mb-3">
-            <label>Select Color:</label>
+            <label>Select Color :</label>
             <div *ngFor="let data of ColorData" let i = index; formControlName="ColorId[i]" [(ngModel)]="ColorId[i]">
                 <label>
                     <input type="checkbox" style.color="{{data.Description}}" value="{{data.Lookup_Details_Id}}" (change)="onSelectChange($event)"  />
@@ -125,7 +125,7 @@
         </div>
 
         <div class="col-md-12 roundedTextBox mb-3">
-            <label>Select Size:</label>
+            <label>Select Size :</label>
             <div *ngFor="let data of SizeData" let i = index; formControlName="SizeId[i]" [(ngModel)]="SizeId[i]">
                 <label>
                     <input type="checkbox" style.color="{{data.Description}}" value="{{data.Lookup_Details_Id}}" (change)="onSelectSizeChange($event)"/>
@@ -137,11 +137,11 @@
             </div> -->
         </div>
         <div class="col-md-12 roundedTextBox mb-3">
-            <label>Photo</label>
+            <label>Product Photo :</label>
             <div class="col-sm-10">
                 <div [innerHtml]='msg' *ngIf="msg" style="color: red;"></div>
                 <div><img [src]="url" *ngIf="url"></div>
-                <p>
+                <p class="color">
                     <input type="file"  [(ngModel)]="Image_Name"  id="inputImage_Name" formControlName="Image_Name" >
                 </p>
             </div>
@@ -151,7 +151,7 @@
         </div>
     </div>
       <br>
-      <div class="buttons text-center">
+      <div class="buttons">
         <button type="button" (click)="addProductDetails()" *ngIf="product.Product_Id==0" class="btn btn-primary">Add</button>
         <button type="button" (click)="updateProductDetails()" *ngIf="product.Product_Id!=0" class="btn btn-primary">Update</button>
     </div>

@@ -10,6 +10,11 @@ export class SharedService {
   readonly APIUrl = "https://localhost:7181/api/";
   constructor(private http: HttpClient) {}
 
+//Menu Binding
+getMenuList(): Observable < any[] > {
+  return this.http.get < any > (this.APIUrl + 'Home/GetMenuList');
+}
+
 //Product Category  Start
 getproductcategoryList(): Observable < any[] > {
     return this.http.get < any > (this.APIUrl + 'Product/GetCategory');
@@ -76,7 +81,6 @@ return this.http.post(this.APIUrl + 'Product/InsertProduct', val);
 }
 
 updateProductDetails(val: any) {
-debugger;
 return this.http.put(this.APIUrl + 'Product/UpdateProduct', val);
 }
 
@@ -192,7 +196,6 @@ return this.http.get(this.APIUrl + 'Customer/GetCustomerReviewPagination?pageNo=
 }
 
 getCustReviewCount(): Observable <any> {
-  debugger;
   return this.http.get < any > (this.APIUrl + 'Customer/GetCustomerReviewCount');
 }
 //End pagination CustReview
@@ -204,7 +207,6 @@ return this.http.get(this.APIUrl + 'Product/GetProductPagination?pageNo='
 }
 
 getProductCount(): Observable <any> {
-  debugger;
   return this.http.get <any> (this.APIUrl + 'Product/GetProductCount');
 }
 //End  Product Category Pagination  
@@ -217,7 +219,6 @@ return this.http.get(this.APIUrl + 'Product/GetProductCategoryPagination?pageNo=
 }
 
 getProductCategoryCount(): Observable <any> {
-  debugger;
   return this.http.get <any> (this.APIUrl + 'Product/GetProductCategoryCount');
 }
 //End  Product Category Pagination
@@ -229,7 +230,6 @@ getSubCategoryPagination(pageNo:any,pageSize:any): Observable<any> {
   }
 
 getSubCategoryCount(): Observable <any> {
-  debugger;
   return this.http.get <any> (this.APIUrl + 'Product/SubCategoryCount');
   }
 //End  Sub Category Pagination
@@ -242,7 +242,6 @@ return this.http.get(this.APIUrl + 'Blog/GetAllBlogPagination?pageNo='
 }
 
 getBlogCount(): Observable <any> {
-  debugger;
   return this.http.get <any> (this.APIUrl + 'Blog/GetAllBlogCount');
 }
 //End Blog Pagination

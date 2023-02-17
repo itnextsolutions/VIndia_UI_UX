@@ -30,7 +30,7 @@ export class AddEditSubcategoryComponent implements OnInit {
   constructor(private service: SharedService,private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
-
+debugger
     this.Pro_SubCatForm = this.formBuilder.group({
        Category_Id: ["", [Validators.required]],
       Sub_Cat_Name: ["",[ Validators.required]],
@@ -38,8 +38,7 @@ export class AddEditSubcategoryComponent implements OnInit {
     });
     this.Id = this.subcategory.Id;
     this.Category_Id =this.subcategory.Category_Id;
-    this.Sub_Cat_Name = this.subcategory.Sub_Cat_Name;
-    // this.Sub_Cat_Photo = this.subcategory.Sub_Cat_Photo;
+    this.Sub_Cat_Name = this.subcategory.SubCategory;
     this.CategoryNameList();
   }
 

@@ -8,7 +8,7 @@ import { FormBuilder, FormGroup, FormArray, FormControl, Validators } from '@ang
   selector: 'add-edit-product',
   templateUrl: './add-edit-product.component.html',
   styleUrls: ['./add-edit-product.component.css']
-})
+})  
 export class AddEditProductComponent implements OnInit {
 
   form = new FormGroup({

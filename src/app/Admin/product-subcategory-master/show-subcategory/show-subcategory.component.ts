@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SharedService } from "src/app/Services/shared.service";
 import { PaginationService } from 'src/app/Services/Api/Admin/pagination.service';
+import { debug } from 'console';
 
 @Component({
   selector: 'app-show-subcategory',
@@ -40,7 +41,6 @@ export class ShowSubcategoryComponent implements OnInit {
   }
 
   getAllSubCategory() {  
-    debugger
    this.sharedService.getSubCategoryPagination(this.pageNo, this.subCategoryPerPage).subscribe((data: any) => { 
      this.SubcategoryList = data;  
       this.getTotalSubCategoryCount();
@@ -48,7 +48,6 @@ export class ShowSubcategoryComponent implements OnInit {
   } 
 
   getTotalSubCategoryCount() {
-    debugger;
         this.sharedService.getSubCategoryCount().subscribe((data: any)=> { 
           this.totalSubCategoryCount=data;
           if (this.totalSubCategoryCount != null) {

@@ -4,8 +4,8 @@
       <div class="row">
         <div class="col-md-12 roundedTextBox mb-3">
           <label>Category Name</label>
-            <select [(ngModel)]="Category_Id" class="form-control" formControlName="Category_Id">
-              <option>Select</option>
+            <select [(ngModel)]="Category_Id" class="form-control" formControlName="Category_Id" >
+              <option value="0">Select Category</option>   
               <option *ngFor="let web of CategoryName" value="{{web.Category_Id}}" [(ngModel)]="Category_Id" id="inputCategory_Id" formControlName="Category_Id"> 
                   {{web.Category_Name}}
               </option>
@@ -36,7 +36,7 @@
         </div> -->
     </div>
       <br>
-      <div class="buttons text-center">
+      <div class="buttons">
           <button type="button" *ngIf="subcategory.Id==0" class="btn btn-primary" (click)="addSubProductCategory()">Add</button>
           <button type="button" *ngIf="subcategory.Id!=0" class="btn btn-primary" (click)="updateSubProductCategory()">Update</button>
       </div>

@@ -7,7 +7,6 @@ export class DataService {
     constructor() {}
    
     storePassedObject(passedData : any[]) {
-      debugger;
       if(!passedData)
       {
         this.allPassedData = passedData;
@@ -16,7 +15,6 @@ export class DataService {
     }
 
     retrievePassedObject() {
-      debugger;
         return this.allPassedData;
     }
 }

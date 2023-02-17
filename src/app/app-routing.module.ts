@@ -16,6 +16,7 @@ import { SearchresultComponent } from './Pages/searchresult/searchresult.compone
 import { FaqComponent } from './Pages/faq/faq.component';
 import { SubcategoryComponent } from './Pages/subcategory/subcategory.component';
 
+
 import { LoginComponent } from './Admin/login/login.component';
 import { ProductCategoryComponent } from './Admin/product-category/product-category.component';
 import { LookupmasterComponent } from './Admin/lookupmaster/lookupmaster.component';
@@ -25,6 +26,7 @@ import { BlogmasterComponent } from './Admin/blogmaster/blogmaster.component';
 import { CustomerReviewMasterComponent } from './Admin/customer-review-master/customer-review-master.component';
 import { ProductSubcategoryMasterComponent } from './Admin/product-subcategory-master/product-subcategory-master.component';
 import { NotificationMasterComponent } from './Admin/notification-master/notification-master.component';
+import { FaqMasterComponent } from './Admin/faq-master/faq-master.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
@@ -52,7 +54,7 @@ const routes: Routes = [
   {path:'admin/customer-review',component:CustomerReviewMasterComponent}, 
   {path:'admin/subcategory',component:ProductSubcategoryMasterComponent},
   {path:'admin/notification-master',component:NotificationMasterComponent},
-
+  {path:'admin/faq-master',component:FaqMasterComponent},
   
 ];
 

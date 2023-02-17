@@ -216,7 +216,7 @@
   ul,
   dl {
     margin-top: 0;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
   }
   
   ol ol,
@@ -6388,6 +6388,7 @@
     color: #fff;
     background: transparent url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 16 16'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/%3e%3c/svg%3e") center/1em auto no-repeat;
     border: 0;
+    background-color: #000000;
     border-radius: 0.375rem;
     opacity: 0.5;
   }
@@ -21109,8 +21110,15 @@
     transform: translate3d(0, -50px, 0);
   }
   
-  .card .card-header {
-    padding: 1.5rem;
+  .card-header {
+   
+    background-color: #f0f3f5;
+    border-bottom: 1px solid #c8ced3;
+    font-size: 13px;
+    font-weight: 600;
+    color: #464646;
+    text-transform: uppercase;
+    padding: 0.75rem 20px;
   }
   
   .card .card-body {

@@ -11,10 +11,10 @@
         <add-edit-subcategory [subcategory]="subcategory" *ngIf="activateAddEditSubCatCom">
         </add-edit-subcategory>
       </div>
-      <div class="modal-footer">
+      <!-- <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
         <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
+      </div> -->
     </div>
   </div>
 </div>
@@ -158,6 +158,7 @@
                 <table class="table align-items-center mb-0">
                   <thead>
                     <tr>
+                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2"></th>
                       <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">No.</th>
                       <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Sub Category Name</th>
                       <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Category Name</th>
@@ -167,6 +168,7 @@
                   </thead>
                   <tbody>
                     <tr *ngFor="let dataItem of SubcategoryList; let i =index;" >
+                      <td><div></div> </td>
                       <td>
                         <div>
                           {{ (pageNo - 1) * subCategoryPerPage + i +1 }}
@@ -195,7 +197,7 @@
                           <span class="badge badge-sm bg-gradient-success">DeActive</span></ng-template>
                       </td>
                      
-                      <td class="align-middle">
+                      <td class="text-center">
                         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-link"
                           (click)="EditSubProductCategory(dataItem)"><i class="material-icons text-sm me-2">edit</i>Edit</button>
                         <button type="button" class="btn btn-link" (click)="deleteClick(dataItem.Category_Id)"><i class="material-icons text-sm me-2">delete</i>Delete</button>

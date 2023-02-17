@@ -12,9 +12,11 @@ export class ShowFaqComponent implements OnInit {
   faqList:any = [];
   pageNo: any = 1;  
   pageNumber: boolean[] = [];  
+  menulist: any = [];
   modalTitle:any;
   activateAddEditFaqCom:boolean = false;
   faq:any;
+
 
   pageField :any= []; 
   exactPageList: any; 
@@ -27,7 +29,21 @@ export class ShowFaqComponent implements OnInit {
   constructor(private sharedService: SharedService,public paginationService: PaginationService) { }
 
   ngOnInit(): void {
-this.getAllFaq();
+    this.getAllFaq();
+    this.getMenuList();
+  }
+
+  getMenuList()
+  {
+    this.sharedService.getMenuList().subscribe((data: any[]) => { 
+      this.menulist = data;
+
+      // if (this.subcategorydetails != null) {
+      //   this.subcategorydetails.forEach((element:any) => {
+      //     this.productsubcategory = element.SubCategory;
+      //   })
+      // }   
+    });
   }
 
   getAllFaq() {  

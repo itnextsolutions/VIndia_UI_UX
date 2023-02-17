@@ -18,15 +18,11 @@ export class ProductsComponent implements OnInit {
   getSubCategoryId:any=[];
   getCategoryName :any;
 
- 
-
   constructor(private param :ActivatedRoute,
               private userService: UserService,
               private router :Router) { }
 
   ngOnInit(): void {
-    
-    
     this.getProductByCategory();
     this.getProductSubcategoryList();
     
@@ -40,6 +36,7 @@ export class ProductsComponent implements OnInit {
   }
 
   getProductByCategory(){
+    debugger
     this.getCategoryId = this.param.snapshot.paramMap.get('category_id');
     this.getCategoryName = this.param.snapshot.paramMap.get('categoryName');
     console.log(this.getCategoryId );

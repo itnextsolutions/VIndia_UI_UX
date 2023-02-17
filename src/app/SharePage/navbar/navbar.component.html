@@ -54,7 +54,7 @@
                 <div class="nav-item dropdown px-2" *ngFor="let data of categorySubcategory">
                     <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown" >{{data.Category_Name}}</a>
                     <div class="dropdown-menu m-0" >
-                        <a href="" (click)="onSubCategoryClick(data,item)" class="dropdown-item" *ngFor="let item of data.subCat;">{{item.SubCategory}}</a>
+                        <a href="/subcategory/2/6" (click)="onSubCategoryClick(data,item)" class="dropdown-item" *ngFor="let item of data.subCat;">{{item.SubCategory}}</a>
                     </div>
                 </div>
             </div>

@@ -2,7 +2,7 @@
     <div class="form-group" >
         <label for="LookupName">Select Lookup Name:</label>
         <select [(ngModel)]="Lookup_Id" class="form-control"  >
-            <option>Select Lookup</option>
+            <option value="0">Select Lookup</option>
             <option *ngFor="let web of LookupName" value="{{web.Lookup_Id}}" >
                 {{web.Lookup_Name}}
             </option>

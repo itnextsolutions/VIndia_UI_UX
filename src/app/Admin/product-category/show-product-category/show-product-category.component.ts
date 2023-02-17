@@ -40,7 +40,6 @@ export class ShowProductCategoryComponent implements OnInit {
   }
 
   getAllProductCategory() {  
-    debugger
    this.sharedService.getProductCategoryPagination(this.pageNo, this.ProductCategoryPerPage).subscribe((data: any) => { 
      this.productcategoryList = data;  
       this.getAlltotalProductCategoryCount();
@@ -48,7 +47,6 @@ export class ShowProductCategoryComponent implements OnInit {
   } 
 
   getAlltotalProductCategoryCount() {
-    debugger;
         this.sharedService.getProductCategoryCount().subscribe((data: any)=> { 
           this.totalProductCategoryCount=data;
           if (this.totalProductCategoryCount != null) {
@@ -64,7 +62,6 @@ export class ShowProductCategoryComponent implements OnInit {
 //Method For Pagination  
 
 totalNoOfPages() { 
-
   this.paginationData = Number(this.total / this.ProductCategoryPerPage);  
   let tempPageData = this.paginationData.toFixed();  
   if (Number(tempPageData) < this.paginationData) {  

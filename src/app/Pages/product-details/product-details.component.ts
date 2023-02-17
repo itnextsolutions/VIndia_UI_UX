@@ -48,6 +48,11 @@ export class ProductDetailsComponent implements OnInit {
      });
   }
 
+  onClick(product: any){
+    this.router.navigate(['product-details/', product.Product_Id]);
+
+  }
+
 }
 
 
