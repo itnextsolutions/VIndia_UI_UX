@@ -37,12 +37,6 @@ export class ShowFaqComponent implements OnInit {
   {
     this.sharedService.getMenuList().subscribe((data: any[]) => { 
       this.menulist = data;
-
-      // if (this.subcategorydetails != null) {
-      //   this.subcategorydetails.forEach((element:any) => {
-      //     this.productsubcategory = element.SubCategory;
-      //   })
-      // }   
     });
   }
 

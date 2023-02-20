@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from "src/app/Services/Api/User/user.service";
+
 
 @Component({
   selector: 'app-faq',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FaqComponent implements OnInit {
 
-  constructor() { }
+  faqList : any = [];
+
+  constructor(private userService: UserService) {}
 
   ngOnInit(): void {
+    this.getFAQ();
   }
 
+  getFAQ(){
+    debugger
+    this.userService.getFAQ().subscribe(data =>{
+      this.faqList = data;
+    });
+  }
 }

@@ -56,6 +56,7 @@ import { AddEditNotificationComponent } from './Admin/notification-master/add-ed
 import { FaqMasterComponent } from './Admin/faq-master/faq-master.component';
 import { ShowFaqComponent } from './Admin/faq-master/show-faq/show-faq.component';
 import { AddEditFaqComponent } from './Admin/faq-master/add-edit-faq/add-edit-faq.component';
+import { SidebarComponent } from './SharePage/sidebar/sidebar.component';
 
 
 
@@ -107,7 +108,8 @@ import { AddEditFaqComponent } from './Admin/faq-master/add-edit-faq/add-edit-fa
     SubcategoryComponent,
     FaqMasterComponent,
     ShowFaqComponent,
-    AddEditFaqComponent
+    AddEditFaqComponent,
+    SidebarComponent
   ],
   
   imports: [
