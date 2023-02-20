@@ -40,17 +40,20 @@ export class ProductDetailsComponent implements OnInit {
      });
 
      this.userService.getColorListById(this.productId).subscribe(data =>{
-      this.color =data;
+      this.colors =data;
      });
 
      this.userService.getSizeListById(this.productId).subscribe(data =>{
-      this.size = data;
+      this.sizes = data;
+
+      
      });
   }
 
   onClick(product: any){
+    debugger
     this.router.navigate(['product-details/', product.Product_Id]);
-
+    this.ngOnInit();
   }
 
 }

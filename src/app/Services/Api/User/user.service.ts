@@ -10,6 +10,10 @@ export class UserService {
   readonly APIUrl = "https://localhost:7181/api/";
   constructor(private http: HttpClient) {}
 
+    getFAQ(): Observable < any[] > {
+      return this.http.get < any > (this.APIUrl + 'Home/GetFaq');
+    }
+
     getNotification(): Observable < any[] > {
       return this.http.get < any > (this.APIUrl + 'Home/GeNotification');
     }

@@ -21,6 +21,7 @@ export class BlogContentComponent implements OnInit {
   }
 
   refreshblogList() {
+    debugger
     this.userService.getallbloglist(this.getBlogId).subscribe(data =>{
       this.blogList = data;
     });
@@ -35,8 +36,12 @@ export class BlogContentComponent implements OnInit {
    }
   
    onClick(blog: any){
+    debugger
     this.router.navigate(['blog/', blog.Blog_Id]);
-    
-  }
+    this.ngOnInit();
+    setTimeout(() =>
+      {},500
+    );
+   }
 }
 
